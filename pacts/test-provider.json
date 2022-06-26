@@ -1,0 +1,60 @@
+{
+  "consumer": {
+    "name": "test"
+  },
+  "interactions": [
+    {
+      "description": "a request for a file with foo/bar",
+      "providerStates": [
+        {
+          "name": "file exists",
+          "params": {
+            "foo": "bar"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/file"
+      },
+      "response": {
+        "status": 200
+      }
+    },
+    {
+      "description": "a request for a file with user/password",
+      "providerStates": [
+        {
+          "name": "file exists",
+          "params": {
+            "fileName": "resource",
+            "password": "pass",
+            "username": "user"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/file"
+      },
+      "response": {
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "10.0.0-beta.60"
+    },
+    "pactRust": {
+      "ffi": "0.2.4",
+      "models": "0.3.1"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "provider"
+  }
+}
