@@ -1,0 +1,5 @@
+# Repro 848
+
+https://github.com/pact-foundation/pact-js/issues/848
+
+Run tests as `npm t` and then inspect the pact file in `./pacts`.

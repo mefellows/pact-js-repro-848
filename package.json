@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "if [ -f ./pacts/test-provider ]; then rm /pacts/*; fi | jest consumer.test.js"
   },
   "keywords": [],
   "author": "",

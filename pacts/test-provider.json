@@ -4,32 +4,12 @@
   },
   "interactions": [
     {
-      "description": "a request for a file with foo/bar",
+      "description": "a request for a file",
       "providerStates": [
         {
           "name": "file exists",
           "params": {
             "foo": "bar"
-          }
-        }
-      ],
-      "request": {
-        "method": "GET",
-        "path": "/file"
-      },
-      "response": {
-        "status": 200
-      }
-    },
-    {
-      "description": "a request for a file with user/password",
-      "providerStates": [
-        {
-          "name": "file exists",
-          "params": {
-            "fileName": "resource",
-            "password": "pass",
-            "username": "user"
           }
         }
       ],
