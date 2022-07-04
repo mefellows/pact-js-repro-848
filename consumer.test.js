@@ -59,6 +59,28 @@ describe('848 repro', () => {
                 });
             });
         });
+
+        describe('"file exists" with two sets of parameters', () => {
+            beforeEach(() =>
+                provider
+                    .given('file exists', { username: "user", password: "pass", fileName: "resource" })
+                    .given('file exists', { foo: "bar" })
+                    .uponReceiving('a request to list all files')
+                    .withRequest({
+                        method: 'GET',
+                        path: "/files"
+                    })
+                    .willRespondWith({
+                        status: 200,
+                    })
+            );
+
+            it('returns the animal', () => {
+                return provider.executeTest(async (mockserver) => {
+                    await axios(`${mockserver.url}/files`)
+                });
+            });
+        });
     });
 
 });
